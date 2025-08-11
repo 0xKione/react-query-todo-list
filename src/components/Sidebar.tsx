@@ -1,6 +1,7 @@
 import React from "react";
 
 import { SidebarItem } from "./SidebarItem";
+import { AddTodoItem } from "./AddTodoItem";
 import { useAppContext, useAppDispatchContext } from "../AppContext";
 
 export const Sidebar = () => {
@@ -9,6 +10,9 @@ export const Sidebar = () => {
 
   return (
     <div className="sidebar">
+      <div className="add-sidebar-item">
+        <AddTodoItem />
+      </div>
       {todos.length === 0 ? (
         <div>Loading...</div>
       ) : (

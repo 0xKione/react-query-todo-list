@@ -34,6 +34,10 @@ html {
   justify-content: flex-start;
 }
 
+.add-sidebar-item {
+  margin-bottom: 1rem;
+}
+
 .checkbox-container {
   display: flex;
   flex-direction: row;
