@@ -2,7 +2,106 @@ html {
   color-scheme: light dark;
   font-family: system-ui;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  height: 100%;
+}
+
+#app {
+  --border-color: white;
+  --text-color: white;
+  --selected-text-color: cyan;
+  width: 75vw;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-right: 2px solid var(--border-color);
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.sidebar-item {
+  cursor: pointer;
+  color: var(--text-color);
+
+  &.selected {
+    color: var(--selected-text-color);
+    font-weight: bold;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex: 3;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.todo-list-item {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.todo-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-list-header {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.todo-list-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1rem;
+}
+
+.todo-list-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }

@@ -1,10 +1,15 @@
-import './App.css';
+import { AppProvider } from "./AppContext";
 
-export function App() {
+import { AppContainer } from "./AppContainer";
+import "./App.css";
+
+export const App = () => {
   return (
     <>
-      <h1>Parcel React App</h1>
-      <p>Edit <code>src/App.tsx</code> to get started!</p>
+      <h2 className="app-title">Todo List</h2>
+      <AppProvider>
+        <AppContainer />
+      </AppProvider>
     </>
   );
-}
+};
