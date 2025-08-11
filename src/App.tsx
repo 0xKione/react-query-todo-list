@@ -1,5 +1,4 @@
 import { AppProvider } from "./AppContext";
-
 import { AppContainer } from "./AppContainer";
 import "./App.css";
 
